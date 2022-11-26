@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @description  This script allows you to perform a complete analysis of nginx access logs
-# @usage        wget -qO .nginx-logs.tmp https://bityli.com/JfsuGXQZ && bash .nginx-logs.tmp
+# @usage        wget -qO .nginx-logs.tmp https://tinyurl.com/yc33m2fw && bash .nginx-logs.tmp
 # @author       Giovani Sehnen <giovani.sehnen@confi.gr>
 #
 # @requires     bash v4+
@@ -25,7 +25,7 @@ cleanup(){
 }
 
 while [ ! -e "${logFile}" ]; do
-  read -rp "Informe o log: " -e LOG
+  read -rp "Informe o log: " -e logFile
 done
 
 if [ -z "${linesFile}" ]; then
