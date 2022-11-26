@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @description  This script allows you to perform a complete analysis of nginx access logs
-# @usage        wget -qO .loganalysis.tmp https://bityli.com/JfsuGXQZ && bash .nginx-logs.tmp
+# @usage        wget -qO .nginx-logs.tmp https://bityli.com/JfsuGXQZ && bash .nginx-logs.tmp
 # @author       Giovani Sehnen <giovani.sehnen@confi.gr>
 #
 # @requires     bash v4+
