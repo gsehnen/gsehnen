@@ -77,10 +77,10 @@ do_ungz(){
   echo -e "Período: ${log_head} - $log_tail"
 
   echo -e "\n=== TOP ${linesFile} URLs mais acessadas ==="
-  cat "${logFile}" | awk '{print $8}' | sort | uniq -c | sort -nr | head -${linesFile}
+  awk -F\" '{print $8}'| awk '{print $8}' | sort | uniq -c | sort -nr | head -${linesFile}
 
   echo -e "\n=== TOP ${linesFile} URLs mais acessadas, ignorando querystrings ==="
-  awk -F\" '{print $2}' "${logFile}" | awk '{print $2}' | awk -F'?' '{print $1}' | sort | uniq -c | sort -nr | head -${linesFile}
+  awk -F\" '{print $8}' "${logFile}" | awk '{print $8}' | awk -F'?' '{print $1}' | sort | uniq -c | sort -nr | head -${linesFile}
 
   echo -e "\n=== TOP ${linesFile} user-agents que mais acessaram o website ==="
   awk -F\" '{print $6}' "${logFile}" | sort | uniq -c | sort -nr | head -${linesFile}
